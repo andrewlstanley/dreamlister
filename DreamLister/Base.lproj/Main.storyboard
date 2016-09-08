@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="1092" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--Title/Edit-->
         <scene sceneID="Prz-7Z-FGb">
             <objects>
-                <viewController id="nzp-RS-WrU" sceneMemberID="viewController">
+                <viewController id="nzp-RS-WrU" customClass="ItemDetailsVC" customModule="DreamLister" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YSw-GT-fcR"/>
                         <viewControllerLayoutGuide type="bottom" id="EBF-hS-lPl"/>
@@ -176,7 +176,7 @@
                                 </constraints>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3LP-Sd-zRn" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7bM-4X-DYo"/>
                                 </constraints>
@@ -185,7 +185,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yMq-MS-Ejy" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="M3N-Ti-Ojm"/>
                                 </constraints>
@@ -194,7 +194,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Details" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KB9-b0-Msk" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="fnK-58-Vs3"/>
                                 </constraints>
@@ -202,14 +202,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZA5-Cj-DZQ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="yMW-Lb-gjX"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeA-lD-7Br">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ABp-fQ-7a3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Save Item">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Store" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnF-Kz-nFi">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MhH-vg-IfB"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZA5-Cj-DZQ" firstAttribute="top" secondItem="vnF-Kz-nFi" secondAttribute="bottom" constant="8" id="3SZ-kt-QNW"/>
+                            <constraint firstItem="NeA-lD-7Br" firstAttribute="top" secondItem="ZA5-Cj-DZQ" secondAttribute="bottom" constant="8" id="6GC-fJ-2Uo"/>
                             <constraint firstItem="3LP-Sd-zRn" firstAttribute="leading" secondItem="PSw-00-v3L" secondAttribute="trailing" constant="8" id="BfO-3X-qFk"/>
                             <constraint firstItem="7aG-RF-uwf" firstAttribute="top" secondItem="YSw-GT-fcR" secondAttribute="bottom" constant="8" id="Du7-pU-Nzr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vnF-Kz-nFi" secondAttribute="trailing" id="GaV-Bq-f94"/>
+                            <constraint firstItem="NeA-lD-7Br" firstAttribute="leading" secondItem="aZ4-mH-Jdm" secondAttribute="leadingMargin" id="N48-i8-yGT"/>
                             <constraint firstItem="KB9-b0-Msk" firstAttribute="top" secondItem="yMq-MS-Ejy" secondAttribute="bottom" constant="10" id="NK8-Ua-1Qm"/>
+                            <constraint firstItem="ZA5-Cj-DZQ" firstAttribute="leading" secondItem="aZ4-mH-Jdm" secondAttribute="leading" id="Nhg-xG-KgK"/>
+                            <constraint firstItem="EBF-hS-lPl" firstAttribute="top" secondItem="NeA-lD-7Br" secondAttribute="bottom" constant="20" id="RGg-P4-0J4"/>
+                            <constraint firstItem="vnF-Kz-nFi" firstAttribute="centerX" secondItem="aZ4-mH-Jdm" secondAttribute="centerX" id="RNC-ZV-LGZ"/>
+                            <constraint firstItem="vnF-Kz-nFi" firstAttribute="leading" secondItem="aZ4-mH-Jdm" secondAttribute="leadingMargin" id="W5u-Gv-x4B"/>
                             <constraint firstItem="PSw-00-v3L" firstAttribute="centerX" secondItem="7aG-RF-uwf" secondAttribute="centerX" id="Z2p-Un-tCH"/>
                             <constraint firstItem="PSw-00-v3L" firstAttribute="centerY" secondItem="7aG-RF-uwf" secondAttribute="centerY" id="ad9-nZ-YpC"/>
+                            <constraint firstAttribute="trailing" secondItem="ZA5-Cj-DZQ" secondAttribute="trailing" id="bLi-pM-N0L"/>
                             <constraint firstItem="7aG-RF-uwf" firstAttribute="leading" secondItem="aZ4-mH-Jdm" secondAttribute="leadingMargin" id="c6q-S7-gDc"/>
                             <constraint firstItem="yMq-MS-Ejy" firstAttribute="leading" secondItem="PSw-00-v3L" secondAttribute="trailing" constant="8" id="eMI-cK-s0P"/>
                             <constraint firstItem="3LP-Sd-zRn" firstAttribute="top" secondItem="YSw-GT-fcR" secondAttribute="bottom" constant="18" id="ejk-BS-6GB"/>
@@ -217,9 +249,21 @@
                             <constraint firstAttribute="trailingMargin" secondItem="yMq-MS-Ejy" secondAttribute="trailing" id="lyr-Zj-TuU"/>
                             <constraint firstItem="KB9-b0-Msk" firstAttribute="leading" secondItem="aZ4-mH-Jdm" secondAttribute="leadingMargin" id="qpb-g1-QJ3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3LP-Sd-zRn" secondAttribute="trailing" id="rca-1j-6Yi"/>
+                            <constraint firstItem="NeA-lD-7Br" firstAttribute="trailing" secondItem="aZ4-mH-Jdm" secondAttribute="trailingMargin" id="tSv-E3-42u"/>
                             <constraint firstItem="KB9-b0-Msk" firstAttribute="trailing" secondItem="aZ4-mH-Jdm" secondAttribute="trailingMargin" id="tvy-DK-Z5J"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title/Edit" id="tQj-QA-dEn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="4oZ-9M-620">
+                            <color key="tintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="detailsField" destination="KB9-b0-Msk" id="7CP-gR-ZlP"/>
+                        <outlet property="priceField" destination="yMq-MS-Ejy" id="EZs-Vl-HsD"/>
+                        <outlet property="storePicker" destination="ZA5-Cj-DZQ" id="762-wK-dob"/>
+                        <outlet property="titleField" destination="3LP-Sd-zRn" id="8dw-tm-Emq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yw1-V4-ZHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,9 +274,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DfC-WP-BWi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5g2-5z-31D">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5g2-5z-31D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
