@@ -29,11 +29,14 @@
                                     <segment title="Title"/>
                                 </segments>
                                 <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="WKP-ID-aYq"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3L8-nV-FbF">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="Yfa-mc-r57" customClass="ItemCell" customModule="DreamLister" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="150" id="Yfa-mc-r57" customClass="ItemCell" customModule="DreamLister" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="Yfa-mc-r57" id="pig-zV-860">
@@ -174,6 +177,9 @@
                                     <constraint firstAttribute="height" constant="100" id="U8a-lI-G3c"/>
                                     <constraint firstAttribute="width" constant="100" id="Vab-bE-Uy5"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="addImage:" destination="nzp-RS-WrU" eventType="touchUpInside" id="t1E-tH-94q"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3LP-Sd-zRn" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -216,6 +222,9 @@
                                 <state key="normal" title="Save Item">
                                     <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="savePressed:" destination="nzp-RS-WrU" eventType="touchUpInside" id="fAK-2K-LuW"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Store" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnF-Kz-nFi">
                                 <constraints>
@@ -256,12 +265,16 @@
                     <navigationItem key="navigationItem" title="Title/Edit" id="tQj-QA-dEn">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="4oZ-9M-620">
                             <color key="tintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="nzp-RS-WrU" id="Fz2-9Y-hiK"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailsField" destination="KB9-b0-Msk" id="7CP-gR-ZlP"/>
                         <outlet property="priceField" destination="yMq-MS-Ejy" id="EZs-Vl-HsD"/>
                         <outlet property="storePicker" destination="ZA5-Cj-DZQ" id="762-wK-dob"/>
+                        <outlet property="thumbImage" destination="7aG-RF-uwf" id="QkY-q8-Im4"/>
                         <outlet property="titleField" destination="3LP-Sd-zRn" id="8dw-tm-Emq"/>
                     </connections>
                 </viewController>
